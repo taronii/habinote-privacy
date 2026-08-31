@@ -5,60 +5,124 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>HABINOTE - プライバシーポリシー</title>
 <style>
-body { font-family: -apple-system, sans-serif; max-width: 700px; margin: 0 auto; padding: 20px; line-height: 1.8; color: #333; }
-h1 { color: #FF6B35; border-bottom: 2px solid #FF6B35; padding-bottom: 10px; }
-h2 { color: #444; margin-top: 30px; }
-p, li { font-size: 15px; }
-.date { color: #888; font-size: 14px; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", sans-serif; max-width: 760px; margin: 0 auto; padding: 24px; line-height: 1.9; color: #333; }
+  h1 { color: #FF6B35; border-bottom: 3px solid #FF6B35; padding-bottom: 12px; }
+  h2 { color: #444; margin-top: 36px; border-left: 5px solid #FF6B35; padding-left: 12px; }
+  h3 { color: #555; margin-top: 24px; font-size: 16px; }
+  p, li { font-size: 15px; }
+  .date { color: #888; font-size: 14px; }
+  table { border-collapse: collapse; width: 100%; margin: 16px 0; font-size: 14px; }
+  th, td { border: 1px solid #ddd; padding: 10px; text-align: left; vertical-align: top; }
+  th { background: #FFF3EE; }
+  .box { background: #FFF8F5; border: 1px solid #FFD9C7; border-radius: 8px; padding: 16px; margin: 20px 0; }
 </style>
 </head>
 <body>
 <h1>HABINOTE プライバシーポリシー</h1>
-<p class="date">最終更新日: 2026年3月13日</p>
+<p class="date">最終更新日: 2026年8月31日</p>
 
 <h2>1. はじめに</h2>
-<p>HABINOTE（以下「本アプリ」）は、ユーザーのプライバシーを尊重し、個人情報の保護に努めます。本プライバシーポリシーは、本アプリが収集する情報とその利用方法について説明します。</p>
+<p>HABINOTE（以下「本アプリ」）は、ユーザーのプライバシーを尊重し、個人情報の保護に努めます。本プライバシーポリシーは、本アプリが収集する情報、その利用方法、および管理方法について説明します。</p>
 
-<h2>2. 収集する情報</h2>
-<p>本アプリでは、以下の情報を収集します。</p>
+<h2>2. 運営者情報</h2>
+<table>
+  <tr><th>アプリ名</th><td>HABINOTE（ハビノート）</td></tr>
+  <tr><th>運営者</th><td>多和田 英太郎</td></tr>
+  <tr><th>連絡先</th><td>taronii@ymail.ne.jp</td></tr>
+</table>
+
+<h2>3. 収集する情報と利用目的</h2>
+<table>
+  <tr><th>情報の種類</th><th>内容</th><th>利用目的</th></tr>
+  <tr>
+    <td>アカウント情報</td>
+    <td>メールアドレス、パスワード（暗号化）、ニックネーム</td>
+    <td>ユーザー認証、アカウント管理</td>
+  </tr>
+  <tr>
+    <td>プロフィール情報</td>
+    <td>年齢（生年月日）、性別、身長、体重、活動レベル、目標</td>
+    <td>基礎代謝・総消費カロリー（TDEE）の計算、目標設定</td>
+  </tr>
+  <tr>
+    <td>記録データ</td>
+    <td>食事記録、運動記録、体重記録、睡眠記録、水分摂取量</td>
+    <td>アプリの主要機能（記録・グラフ表示・進捗管理）の提供</td>
+  </tr>
+  <tr>
+    <td><strong>位置情報</strong></td>
+    <td>GPSによる位置情報（緯度・経度）</td>
+    <td><strong>ランニング計測機能</strong>において、走行距離・ペース・消費カロリーを算出するために使用します。詳細は第4項をご覧ください。</td>
+  </tr>
+  <tr>
+    <td>ヘルスケアデータ</td>
+    <td>歩数、睡眠データ</td>
+    <td>ユーザーの明示的な許可がある場合のみ、Apple HealthKit / Android Health Connect 経由で取得し、活動量の記録に使用します。</td>
+  </tr>
+  <tr>
+    <td>写真・カメラ</td>
+    <td>ユーザーが撮影・選択した食事の写真</td>
+    <td>AIによる食事内容・栄養素の自動分析（プレミアム機能）。分析後、写真はサーバーに保存されません。</td>
+  </tr>
+  <tr>
+    <td>プッシュ通知トークン</td>
+    <td>端末固有の通知トークン</td>
+    <td>記録リマインダー、お知らせ等の通知配信</td>
+  </tr>
+  <tr>
+    <td>購入情報</td>
+    <td>サブスクリプションの購入状態</td>
+    <td>プレミアム機能の提供状況の管理（決済情報そのものは取得しません）</td>
+  </tr>
+</table>
+
+<h2>4. 位置情報の取り扱い（重要）</h2>
+<div class="box">
+  <h3>収集するタイミング</h3>
+  <p>位置情報は、<strong>ユーザーが「ランニング」機能で計測を開始している間に限り</strong>収集します。計測を停止すれば、位置情報の取得も直ちに停止します。アプリを使用していない時に位置情報を収集することはありません。</p>
+
+  <h3>バックグラウンドでの取得について</h3>
+  <p>ランニングは屋外で長時間行われ、ユーザーは走行中に画面を消したり端末をポケットに入れたりします。そのため、正確に距離を記録し続けるには<strong>バックグラウンド（画面ロック中）での位置情報アクセス</strong>が必要です。バックグラウンドで計測している間は、常時通知を表示してユーザーが計測中であることを明示し、いつでも停止できるようにしています。</p>
+
+  <h3>利用目的</h3>
+  <p>取得した位置情報は、<strong>走行距離・ペース・消費カロリーの算出および走行記録の作成のみ</strong>に使用します。<strong>広告目的での利用、第三者への提供・販売は一切行いません。</strong></p>
+
+  <h3>保存について</h3>
+  <p>走行の軌跡（ルート）そのものはサーバーに保存されません。保存されるのは、算出された距離・時間・ペース・消費カロリーなどの記録データのみです。</p>
+
+  <h3>許可の管理</h3>
+  <p>位置情報の許可は、端末の設定からいつでも変更・取り消しができます。許可しない場合でも、ランニング計測以外のすべての機能をご利用いただけます。</p>
+</div>
+
+<h2>5. 情報の保存と保護</h2>
+<p>ユーザーのデータは Google Firebase（Firestore / Authentication）に保存されます。通信は暗号化（HTTPS）され、データはユーザーのアカウントに紐づいて管理されます。適切なアクセス制御により、他のユーザーがあなたのデータにアクセスすることはできません。</p>
+
+<h2>6. 第三者への提供・共有</h2>
+<p>本アプリは、ユーザーの個人情報を第三者に販売、貸与することはありません。以下の場合を除き、第三者に提供することもありません。</p>
 <ul>
-<li><strong>アカウント情報</strong>: メールアドレス（認証目的）</li>
-<li><strong>プロフィール情報</strong>: ニックネーム、年齢、性別、身長、体重、活動レベル（カロリー計算目的）</li>
-<li><strong>記録データ</strong>: 食事記録、運動記録、体重記録（アプリの主要機能として）</li>
-<li><strong>ヘルスケアデータ</strong>: 歩数、睡眠データ（ユーザーの許可がある場合のみ、Apple HealthKit / Health Connect経由）</li>
+  <li>法令に基づく開示要求があった場合</li>
+  <li>ユーザー本人の同意がある場合</li>
+</ul>
+<p>なお、本アプリは以下の外部サービスを利用しており、機能提供に必要な範囲でデータが処理されます。</p>
+<ul>
+  <li><strong>Google Firebase</strong>（認証・データ保存・分析）</li>
+  <li><strong>Anthropic Claude API</strong>（AIアドバイザー・食事写真分析。入力内容は分析のためにのみ送信され、AIの学習には利用されません）</li>
+  <li><strong>RevenueCat</strong>（サブスクリプションの購入状態管理）</li>
+  <li><strong>Expo</strong>（プッシュ通知の配信）</li>
 </ul>
 
-<h2>3. 情報の利用目的</h2>
-<p>収集した情報は以下の目的で利用します。</p>
-<ul>
-<li>カロリー目標の計算と表示</li>
-<li>食事・運動・体重の記録と進捗管理</li>
-<li>ゲーミフィケーション機能（レベル、バッジ、ストリーク）の提供</li>
-<li>アプリの改善とユーザー体験の向上</li>
-</ul>
+<h2>7. データの削除</h2>
+<p>ユーザーは、アプリ内の「設定」画面からいつでもアカウントと全データを削除できます。削除されたデータは復元できません。また、上記の連絡先メールアドレスにご連絡いただくことでも削除を承ります。</p>
 
-<h2>4. 情報の保存</h2>
-<p>ユーザーのデータはGoogle Firebase（Firestore）に安全に保存されます。データはユーザーのアカウントに紐づき、他のユーザーからはアクセスできません。</p>
+<h2>8. お子様のプライバシー</h2>
+<p>本アプリは13歳未満のお子様を対象としておりません。13歳未満のお子様から意図的に個人情報を収集することはありません。</p>
 
-<h2>5. 第三者への提供</h2>
-<p>本アプリは、ユーザーの個人情報を第三者に販売、貸与、または共有することはありません。ただし、以下の場合を除きます。</p>
-<ul>
-<li>法令に基づく開示要求があった場合</li>
-<li>ユーザーの同意がある場合</li>
-</ul>
+<h2>9. ポリシーの変更</h2>
+<p>本プライバシーポリシーは必要に応じて更新されることがあります。重要な変更がある場合は、アプリ内でお知らせします。</p>
 
-<h2>6. データの削除</h2>
-<p>ユーザーはアプリ内の設定画面からいつでもアカウントと全データを削除できます。削除されたデータは復元できません。</p>
-
-<h2>7. お子様のプライバシー</h2>
-<p>本アプリは13歳未満のお子様を対象としておりません。</p>
-
-<h2>8. ポリシーの変更</h2>
-<p>本プライバシーポリシーは必要に応じて更新されることがあります。重要な変更がある場合は、アプリ内で通知します。</p>
-
-<h2>9. お問い合わせ</h2>
+<h2>10. お問い合わせ</h2>
 <p>プライバシーに関するお問い合わせは、以下までご連絡ください。</p>
-<p>メール: <a href="mailto:support@habinote.com">support@habinote.com</a></p>
+<p><strong>メール: taronii@ymail.ne.jp</strong></p>
 
 </body>
 </html>
